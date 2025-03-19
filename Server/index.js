@@ -12,7 +12,7 @@ app.get('/', (req, res)=>{
     fetchUsers();
     fetchPosts();
     fetchComments();
-    res.status(200).json('done');
+    res.status(200).json('Fetched');
 });
 
 app.use('/users', usersRouter);
@@ -20,6 +20,6 @@ app.use('/users', usersRouter);
 app.listen(3000, ()=>{
     console.log("server Running at port number 3000");
     connectDb();
-})
+});
 
 export default app;
